@@ -15,8 +15,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from user.views import get_user_data
+from user.views import get_user_data, create_user_account, create_user_account_body
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('get_data/',get_user_data)
+    path('get_data/', get_user_data),
+    path('create_user/', create_user_account),
+    path('create_user_body/', create_user_account_body),
+    # path('get_otp_by_email/', send_otp_email),
+
 ]
